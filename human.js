@@ -19,6 +19,9 @@ class Human extends Player {
             this.choice = "Lizard";
         }else if (input == 5){
             this.choice = "Spock"
+        }else{
+            console.log("Not a valid choice! Try again");
+            this.chooseGesture();
         }
     }
 }
