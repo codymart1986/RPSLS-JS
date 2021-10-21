@@ -10,6 +10,9 @@ class Game {
     runMain(){
         this.rules();
         this.gameType();
+        this.bestOf();
+        this.score();
+        this.playAgain();
         
     }
     rules(){
@@ -18,11 +21,11 @@ class Game {
     gameType() {
         let selection = prompt("Make a choice \n Press 1 for a game against AI \n Press 2 for a local game against a petty human");
         switch(selection){
-            case 1:
-                this.humanPlayer();
-                break;
-            case 2:
+            case "1":
                 this.computerPlayer();
+                break;
+            case "2":
+                this.humanPlayer();
                 break;
             default:
                 return this.gameType();
@@ -33,6 +36,46 @@ class Game {
     }
     computerPlayer(){
         this.playerTwo = new AI();
+    }
+    bestOf(){
+        while (this.playerOne.score < 3 && this.playerTwo.score < 3){
+            console.log("Player one's turn");
+            this.playerOne.chooseGesture();
+            console.log("Player two's turn");
+            this.playerTwo.chooseGesture();
+
+            if (this.playerOne.choice === this.playerTwo.choice){
+                console.log("Draw");
+            }else if (this.playerOne.choice === "Rock" && this.playerTwo.choice === "Scissors" || this.playerTwo.choice === "Lizard"){
+                console.log("Player 1 wins!");
+                this.playerOne.score += 1;
+            }else if (this.playerOne.choice === "Paper" && this.playerTwo.choice === "Rock" || this.playerTwo.choice === "Spock"){
+                console.log("Player 1 wins!");
+                this.playerOne.score += 1;
+            }else if (this.playerOne.choice === "Scissors" && this.playerTwo.choice === "Paper" || this.playerTwo.choice === "Lizard"){
+                console.log("Player 1 wins!");
+                this.playerOne.score += 1;
+            }else if (this.playerOne.choice === "Lizard" && this.playerTwo.choice === "Spock" || this.playerTwo.choice === "Paper"){
+                console.log("Player 1 wins!");
+                this.playerOne.score += 1;
+            }else if (this.playerOne.choice === "Spock" && this.playerTwo.choice === "Rock" || this.playerTwo.choice === "Scissors"){
+                console.log("Player 1 wins!");
+                this.playerOne.score += 1;
+            }else{
+                console.log("Player 2 wins!");
+                this.playerTwo.score +=1;
+            }
+        }
+    }
+    score(){
+        if (this.playerOne.score > this.playerTwo.score){
+            console.log("Player 1 wins the game!");
+        }else{
+            console.log("Player 2 wins the game!");
+        }
+    }
+    playAgain(){
+        this.runMain();
     }
 }
 
