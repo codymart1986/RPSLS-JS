@@ -7,6 +7,11 @@ class Game {
         this.playerOne = new Human();
         this.playerTwo = null;
     }
+    runMain(){
+        this.rules();
+        this.gameType();
+        
+    }
     rules(){
         console.log("Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors, scissors decapitates lizard, lizard eats paper, paper disproves Spock, Spock vaporizes rock, and as it always has, rock crushes scissors.");
     }
@@ -30,3 +35,5 @@ class Game {
         this.playerTwo = new AI();
     }
 }
+
+module.exports = Game
