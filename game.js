@@ -117,7 +117,15 @@ class Game {
         }
     }
     playAgain(){
-        newGame();
+        let again = prompt("Would you like to play again? 1 - Yes 2 - No");
+        switch(again){
+            case "1":
+                newGame();
+            case "2":
+                process.exit();
+            default:
+                return this.playAgain();
+        }
     }
 }
 
