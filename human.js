@@ -7,8 +7,9 @@ class Human extends Player {
         super(userName);
     }
     chooseGesture() {
-        let input = prompt("Select a gesture! \n 1 = Rock \n 2 = Paper \n 3 = Scissors \n 4 = Lizard \n 5 = Spock \n");
-        if (input == "1"){
+        let input = prompt("Select a gesture! 1 = Rock, 2 = Paper, 3 = Scissors, 4 = Lizard, 5 = Spock");
+        console.log(input)
+        if (input === "1"){
             this.choice = "Rock";
         }else if (input === "2"){
             this.choice = "Paper";

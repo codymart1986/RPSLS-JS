@@ -5,9 +5,7 @@ class Player {
         this.choice = "";
         this.gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
     }
-    chooseGesture(){
-
-    }
+   
 }
 
 module.exports = Player;

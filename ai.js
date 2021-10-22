@@ -5,8 +5,8 @@ class AI extends Player {
         super("CL4P-TP");
     }
     chooseGesture(){
-        this.choice = this.gestures[Math.floor(Math.random() * 5) + 1];
-       
+        this.choice = this.gestures[Math.floor(Math.random() * this.gestures.length)];
+        console.log( `Computer chooses ${this.choice}`)
     }
 }
 
