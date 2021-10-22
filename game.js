@@ -46,45 +46,65 @@ class Game {
 
             if (this.playerOne.choice === this.playerTwo.choice){
                 console.log("Draw");
-            }else if (this.playerOne.choice === "Rock"){
-                if (this.playerTwo.choice === "Scissors" || this.playerTwo.choice === "Lizard"){
+            }else if (this.playerOne.choice === this.playerOne.gestures[0]){
+                if (this.playerTwo.choice === this.playerTwo.gestures[2] || this.playerTwo.choice === this.playerTwo.gestures[3]){
                     console.log("Player 1 wins!");
                     this.playerOne.score += 1;
+                    console.log("Player 1 score = " + this.playerOne.score);
+                    console.log("Player 2 score = " + this.playerTwo.score);
                 }else{
                     console.log("Player 2 wins!");
                     this.playerTwo.score += 1;
+                    console.log("Player 1 score = " + this.playerOne.score);
+                    console.log("Player 2 score = " + this.playerTwo.score);
                 }    
-            }else if (this.playerOne.choice === "Paper"){
-                if (this.playerTwo.choice === "Rock" || this.playerTwo.choice === "Spock"){
+            }else if (this.playerOne.choice === this.playerOne.gestures[1]){
+                if (this.playerTwo.choice === this.playerTwo.gestures[0] || this.playerTwo.choice === this.playerTwo.gestures[4]){
                     console.log("Player 1 wins!");
                     this.playerOne.score += 1;
+                    console.log("Player 1 score = " + this.playerOne.score);
+                    console.log("Player 2 score = " + this.playerTwo.score);
                 }else{
-                        console.log("Player 2 wins!");
-                        this.playerTwo.score += 1;
+                    console.log("Player 2 wins!");
+                    this.playerTwo.score += 1;
+                    console.log("Player 1 score = " + this.playerOne.score);
+                    console.log("Player 2 score = " + this.playerTwo.score);
                 }    
-            }else if (this.playerOne.choice === "Scissors"){
-                if (this.playerTwo.choice === "Paper" || this.playerTwo.choice === "Lizard"){
+            }else if (this.playerOne.choice === this.playerOne.gestures[2]){
+                if (this.playerTwo.choice === this.playerTwo.gestures[1] || this.playerTwo.choice === this.playerTwo.gestures[3]){
                     console.log("Player 1 wins!");
                     this.playerOne.score += 1;
+                    console.log("Player 1 score = " + this.playerOne.score);
+                    console.log("Player 2 score = " + this.playerTwo.score);
                 }else{
-                        console.log("Player 2 wins!");
-                        this.playerTwo.score += 1;
+                    console.log("Player 2 wins!");
+                    this.playerTwo.score += 1;
+                    console.log("Player 1 score = " + this.playerOne.score);
+                    console.log("Player 2 score = " + this.playerTwo.score);
                 }    
-            }else if (this.playerOne.choice === "Lizard"){
-                if (this.playerTwo.choice === "Spock" || this.playerTwo.choice === "Paper"){
+            }else if (this.playerOne.choice === this.playerOne.gestures[3]){
+                if (this.playerTwo.choice === this.playerTwo.gestures[4] || this.playerTwo.choice === this.playerTwo.gestures[1]){
                     console.log("Player 1 wins!");
                     this.playerOne.score += 1;
+                    console.log("Player 1 score = " + this.playerOne.score);
+                    console.log("Player 2 score = " + this.playerTwo.score);
                 }else{
-                        console.log("Player 2 wins!");
-                        this.playerTwo.score += 1;
+                    console.log("Player 2 wins!");
+                    this.playerTwo.score += 1;
+                    console.log("Player 1 score = " + this.playerOne.score);
+                    console.log("Player 2 score = " + this.playerTwo.score);
                 }    
-            }else if (this.playerOne.choice === "Spock"){
-                if (this.playerTwo.choice === "Rock" || this.playerTwo.choice === "Scissors"){
+            }else if (this.playerOne.choice === this.playerOne.gestures[4]){
+                if (this.playerTwo.choice === this.playerTwo.gestures[0] || this.playerTwo.choice === this.playerTwo.gestures[2]){
                     console.log("Player 1 wins!");
                     this.playerOne.score += 1;
+                    console.log("Player 1 score = " + this.playerOne.score);
+                    console.log("Player 2 score = " + this.playerTwo.score);
                 }else{
-                        console.log("Player 2 wins!");
-                        this.playerTwo.score += 1;
+                    console.log("Player 2 wins!");
+                    this.playerTwo.score += 1;
+                    console.log("Player 1 score = " + this.playerOne.score);
+                    console.log("Player 2 score = " + this.playerTwo.score);
                 }    
             }
         }

@@ -10,15 +10,20 @@ class Human extends Player {
         let input = prompt("Select a gesture! 1 = Rock, 2 = Paper, 3 = Scissors, 4 = Lizard, 5 = Spock");
         console.log(input)
         if (input === "1"){
-            this.choice = "Rock";
+            this.choice = this.gestures[0];
+            console.log(`Player 1 chose ${this.choice}`)
         }else if (input === "2"){
-            this.choice = "Paper";
+            this.choice = this.gestures[1];
+            console.log(`Player 1 chose ${this.choice}`)
         }else if (input === "3"){
-            this.choice = "Scissors";
+            this.choice = this.gestures[2];
+            console.log(`Player 1 chose ${this.choice}`)
         }else if (input === "4"){
-            this.choice = "Lizard";
+            this.choice = this.gestures[3];
+            console.log(`Player 1 chose ${this.choice}`)
         }else if (input === "5"){
-            this.choice = "Spock"
+            this.choice = this.gestures[4]
+            console.log(`Player 1 chose ${this.choice}`)
         }else{
             console.log("Not a valid choice! Try again");
             this.chooseGesture();
